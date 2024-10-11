@@ -1,0 +1,64 @@
+.rdp-root {
+    --rdp-accent-color: #FF533D; /* Change the accent color to indigo. */
+    --rdp-today-color: #FF533D;
+}
+
+.calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height to center vertically */
+}
+
+.calendar-inside-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0.1em solid #0F1626; /* Adjust the color and thickness as needed */
+    border-radius: 1em; /* Rounded corners */
+    padding: 1em; /* Optional: adds space around the calendar */
+}
+
+.time-selection {
+    margin-top: 1.5em;
+    text-align: center;
+    padding: 2em;
+}
+
+.time-options {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid */
+    /* flex-direction: column; */
+    gap: 0.65em;
+    /* justify-content: center; */
+}
+
+.time-button {
+    padding: 0.75em 1.5em;
+    border: 0.1em solid #0F1626;
+    border-radius: 0.6em;
+    background-color: #F5F5F5;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.time-button:hover {
+    background-color: #FF533D;
+    color: white;
+}
+
+.time-button.selected {
+    background-color: #FF533D;
+    color: white;
+    transform: scale(1.05);
+}
+
+.DayPicker {
+    border: 2px solid #4A90E2; /* Adjust the color and thickness as needed */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Optional: adds space around the calendar */
+    background-color: white; /* Optional: background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a raised effect */
+}
