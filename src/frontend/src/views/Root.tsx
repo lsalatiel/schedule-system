@@ -4,10 +4,12 @@ import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import { ptBR } from "date-fns/locale";
 import "./root.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Root() {
     const [selectedDate, setSelectedDate] = useState<Date | undefined>();
     const [selectedTime, setSelectedTime] = useState<string | undefined>();
+    const navigate = useNavigate();
 
     const availableTimes = [
         "09:00",
@@ -41,7 +43,13 @@ export default function Root() {
                             <li key={time}>
                                 <button
                                     className={`time-button ${selectedTime === time ? "selected" : ""}`}
-                                    onClick={() => setSelectedTime(time)}
+                                    onClick={() => {
+                                            setSelectedTime(time);
+                                            localStorage.setItem("selectedDate", selectedDate.toLocaleDateString("pt-BR"));
+                                            localStorage.setItem("selectedTime", time);
+                                            navigate("/cadastro");
+                                        }
+                                    }
                                 >
                                     {time}
                                 </button>
