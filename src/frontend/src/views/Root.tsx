@@ -3,7 +3,7 @@ import React from "react";
 import { DayPicker } from "react-day-picker";
 import "react-day-picker/style.css";
 import { ptBR } from "date-fns/locale";
-import "./root.css";
+import "./styles/root.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Root() {

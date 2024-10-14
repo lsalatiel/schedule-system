@@ -54,11 +54,3 @@
     color: white;
     transform: scale(1.05);
 }
-
-.DayPicker {
-    border: 2px solid #4A90E2; /* Adjust the color and thickness as needed */
-    border-radius: 15px; /* Rounded corners */
-    padding: 20px; /* Optional: adds space around the calendar */
-    background-color: white; /* Optional: background color */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a raised effect */
-}
