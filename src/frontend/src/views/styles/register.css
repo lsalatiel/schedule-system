@@ -1,0 +1,40 @@
+/* Container for the date and time info */
+.date-info-container {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.date-info-container h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0.5em 0;
+}
+
+/* Centralizing and styling the form container */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5em;
+    background-color: white;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.form-container h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.5em;
+    color: #FF533D;
+}
+
+.form-container h4 {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+    color: #555;
+    font-weight: 400;
+}
+
+/* Ensure the form is centered within the container */
+.form-container form {
+    margin: 0 auto;
+}
