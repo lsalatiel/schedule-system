@@ -51,7 +51,7 @@ export default function Form() {
                     value={phone}
                     onChange={handlePhoneChange}
                 />
-                <button className="submit-button" type="submit">Submit</button>
+                <button className="submit-button" type="submit">Enviar</button>
             </form>
         </div>
     );

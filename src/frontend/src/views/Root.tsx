@@ -32,6 +32,8 @@ export default function Root() {
                     mode="single"
                     selected={selectedDate}
                     onSelect={setSelectedDate}
+                    disabled={{ before: new Date() }}
+                    startMonth={new Date()}
                 />
             </div>
 
