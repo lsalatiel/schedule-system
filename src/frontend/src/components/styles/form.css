@@ -17,10 +17,10 @@
     font-size: 1em; /* 16px */
 }
 
-user-input:focus {
+.user-input:focus {
     outline: none;
     border-color: #FF533D;
-    /* box-shadow: 0 0 0.3125em rgba(74, 144, 226, 0.5); */ /* 5px */
+    /* box-shadow: 0 0 0.3125em rgba(74, 144, 226, 0.5); */
 }
 
 .submit-button {
