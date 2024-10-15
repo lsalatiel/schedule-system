@@ -1,22 +1,25 @@
 .rdp-root {
-    --rdp-accent-color: #FF533D; /* Change the accent color to indigo. */
+    --rdp-accent-color: #FF533D;
     --rdp-today-color: #FF533D;
 }
 
 .calendar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Full viewport height to center vertically */
+    width: 100%;
+    max-width: 400px;
+    padding: 1.5em;
+    background-color: white;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    text-align: center;
 }
 
 .calendar-inside-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 0.1em solid #0F1626; /* Adjust the color and thickness as needed */
+    /* box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1); */
     border-radius: 1em; /* Rounded corners */
-    padding: 1em; /* Optional: adds space around the calendar */
+    /* padding: 1em; */
 }
 
 .time-selection {
@@ -33,13 +36,14 @@
     /* flex-direction: column; */
     gap: 0.65em;
     /* justify-content: center; */
+    margin-bottom: 2em;
 }
 
 .time-button {
     padding: 0.75em 1.5em;
     border: 0.1em solid #0F1626;
     border-radius: 0.6em;
-    background-color: #F5F5F5;
+    background-color: white;
     cursor: pointer;
     transition: background-color 0.2s, transform 0.2s;
 }
@@ -53,4 +57,9 @@
     background-color: #FF533D;
     color: white;
     transform: scale(1.05);
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
 }

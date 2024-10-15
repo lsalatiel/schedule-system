@@ -25,41 +25,55 @@ export default function Root() {
     ]
 
     return (
-        <div className="calendar-container">
-            <div className="calendar-inside-container">
-                <DayPicker
-                    locale={ptBR}
-                    mode="single"
-                    selected={selectedDate}
-                    onSelect={setSelectedDate}
-                    disabled={{ before: new Date() }}
-                    startMonth={new Date()}
-                />
+        <div>
+            <div className="title-container">
+                <h2 className="title">Agende seu horário</h2>
             </div>
-
-            {selectedDate && (
-                <div className="time-selection">
-                    <h3>Selecione um horário:</h3>
-                    <ul className="time-options">
-                        {availableTimes.map((time) => (
-                            <li key={time}>
-                                <button
-                                    className={`time-button ${selectedTime === time ? "selected" : ""}`}
-                                    onClick={() => {
-                                            setSelectedTime(time);
-                                            localStorage.setItem("selectedDate", selectedDate.toLocaleDateString("pt-BR"));
-                                            localStorage.setItem("selectedTime", time);
-                                            navigate("/cadastro");
-                                        }
-                                    }
-                                >
-                                    {time}
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
+            <div className="calendar-container">
+                <div className="calendar-inside-container">
+                    <DayPicker
+                        locale={ptBR}
+                        mode="single"
+                        selected={selectedDate}
+                        onSelect={setSelectedDate}
+                        disabled={{ before: new Date() }}
+                        startMonth={new Date()}
+                    />
                 </div>
-            )}
+
+                {selectedDate && (
+                    <div className="time-selection">
+                        <h3>Selecione um horário:</h3>
+                        <ul className="time-options">
+                            {availableTimes.map((time) => (
+                                <li key={time}>
+                                    <button
+                                        className={`time-button ${selectedTime === time ? "selected" : ""}`}
+                                        onClick={() => {
+                                                setSelectedTime(time);
+                                            }
+                                        }
+                                    >
+                                        {time}
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                        <button
+                        className="submit-button"
+                        onClick={() => {
+                            if (selectedDate && selectedTime) {
+                                localStorage.setItem("selectedDate", selectedDate.toLocaleDateString("pt-BR"));
+                                localStorage.setItem("selectedTime", selectedTime);
+                                navigate("/cadastro");
+                            }
+                        }}
+                        >
+                            Confirmar
+                        </button>
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
