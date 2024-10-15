@@ -38,3 +38,9 @@
 .submit-button:hover {
     background-color: #FF1F02;
 }
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 1em;
+}

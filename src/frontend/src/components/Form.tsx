@@ -30,24 +30,27 @@ export default function Form() {
     return (
         <div>
             <form className="user-form" onSubmit={handleSubmit}>
+                <label htmlFor="name">Nome:</label>
                 <input
                     className="user-input"
                     type="text"
-                    placeholder="Nome"
+                    // placeholder="Nome"
                     value={name}
                     onChange={handleNameChange}
                 />
+                <label htmlFor="email">Email:</label>
                 <input
                     className="user-input"
                     type="text"
-                    placeholder="E-mail"
+                    // placeholder="E-mail"
                     value={email}
                     onChange={handleEmailChange}
                 />
+                <label htmlFor="phone">Telefone:</label>
                 <input
                     className="user-input"
                     type="text"
-                    placeholder="Telefone"
+                    // placeholder="Telefone"
                     value={phone}
                     onChange={handlePhoneChange}
                 />
