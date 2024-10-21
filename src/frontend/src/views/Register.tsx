@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/register.css";
-import Form from "../components/Form.tsx";
+import Form from "../components/RegisterForm.tsx";
 
 export default function Register() {
     const selectedDate = localStorage.getItem("selectedDate");
