@@ -52,6 +52,8 @@ export default function Form() {
         console.log("Name:", name);
         console.log("Email:", email);
         console.log("Phone:", phone);
+
+        document.getElementById("register-content")!.innerHTML = "<h1>Formulário enviado com sucesso!</h1><h2>Assim que confirmarmos sua solicitação, você receberá uma mensagem de confirmação em seu Whatsapp.</h2>";
     };
 
     return (

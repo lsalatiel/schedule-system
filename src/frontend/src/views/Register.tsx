@@ -7,7 +7,7 @@ export default function Register() {
     const selectedTime = localStorage.getItem("selectedTime");
 
     return (
-        <div className="register-content">
+        <div id="register-content">
             <div className="date-info-container">
                 <h2>{selectedDate}</h2>
                 <h2>{selectedTime}</h2>
